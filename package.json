@@ -1,0 +1,23 @@
+{
+  "name": "to-dolistnode",
+  "version": "1.0.0",
+  "description": "To-Do nodeJS project with MVC architecture",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ferreira-leonardo/To-DoListNode.js.git"
+  },
+  "author": "Leonardo Ferreira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ferreira-leonardo/To-DoListNode.js/issues"
+  },
+  "homepage": "https://github.com/ferreira-leonardo/To-DoListNode.js#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
