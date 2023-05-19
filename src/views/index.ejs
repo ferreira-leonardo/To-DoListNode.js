@@ -5,21 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do List</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
 
     <header>
         <% if (task == null) { %>
+            <h1>To-Do List</h1>
         <form action="/create" method="post" enctype="application/x-www-form-urlencoded">
             <input type="text" name="task" id="task" placeholder="Insira uma tarefa">
             <button type="submit" id="addButton">Adicionar</button>
         </form>
         <% } else { %>
 
+            <h1>Editar tarefa</h1>
         <form action="/updatetask/<%= task._id %>" method="post" enctype="application/x-www-form-urlencoded">
             <input type="text" name="task" id="task" value='<%= task.task %>'>
-            <button type="submit" id="addButton">atualizar</button>
+            <button type="submit" id="upButton">atualizar</button>
         </form>
         <% } %>
     </header>
@@ -28,9 +31,11 @@
         <ul>
             <% taskList.forEach( (task) => { %>
                 <li>
-                    <%= task.task %> | <%= task.date.toLocaleDateString('pt-Br') %>
-                    <a href="/getbyid/<%= task._id%>/update">Editar</a>
-                    <a href="/getbyid/<%= task._id%>/delete">Apagar</a>
+                    <a href=""><%= task.task %> <span>Criado em <%= task.date.toLocaleDateString('pt-Br') %></span></a>
+                    <div>
+                        <a class="btnUpdate" href="/getbyid/<%= task._id%>/update"><i class="bi bi-pencil-square"></i></a>
+                        <a class="btnDelete" href="/getbyid/<%= task._id%>/delete"><i class="bi bi-trash"></i></a>
+                    </div>
                 </li>
             <% }) %>
         </ul>
@@ -39,12 +44,12 @@
     <% if (taskDelete != null) { %>
         <section id="modal">
             <div id="card">
-                <a href="/">x</a>
+                <a href="/"><i class="bi bi-x-circle"></i></a>
                 <h2>Confirmação</h2>
                 <hr>
-                <p>Deseja realmente apagar a tarefa: <%= taskDelete.task %>?</p>
-                <a href="/">Não</a>
+                <p>Deseja realmente apagar a tarefa: <span id="spanTask"><%= taskDelete.task %></span>?</p>
                 <a href="/deleteonetask/<%= taskDelete._id%>">Sim</a>
+                <a href="/">Não</a>
             </div>
         </section>
     <% } %>
