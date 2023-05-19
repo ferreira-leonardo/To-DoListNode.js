@@ -8,6 +8,8 @@
 }
 
 body{
+    display: flex;
+    flex-direction: column;
     color: #fff;
     width: 80%;
     height: 100%;
@@ -80,12 +82,13 @@ ul li{
 
 #tasks li > a:first-child{
     color: #fff;
+    padding-left: 2.2rem;
 }
 
 #tasks li > a:first-child span{
     color: #ccc;
     font-style: italic;
-    font-size: .5rem;
+    font-size: .7rem;
     padding-left: 1rem;
 }
 
@@ -95,10 +98,12 @@ ul li{
 }
 
 #tasks a:first-child {
+    font-size: 1.5rem;
     color: #037ddba8;
 }
 
 #tasks a:last-child {
+    font-size: 1.5rem;
     color: #f74e4ea8;
 }
   
@@ -184,4 +189,77 @@ section#modal{
 
 #card{
     padding-bottom: 1rem;
+}
+
+.message{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .5rem;
+    width: 76%;
+    align-self: center;
+    position: absolute;
+    top: .5rem;
+    z-index: 9999;
+}
+
+.message-danger{
+    color: #8a0000;
+    background-color: #ffc5c5;
+}
+
+.message-success{
+    background-color: #0c8004;
+}
+
+#close-message{
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.message-success #close-message:hover{
+    color: #63b35d;
+}
+
+.message-danger #close-message:hover{
+    color: #ff0000;
+}
+
+ul li.check-true{
+    text-decoration: line-through;
+}
+
+ul li a.check-true::before{
+    content: "";
+    position: absolute;
+    border: solid #a1a1a1;
+    top: 23px;
+    left: 11px;
+    width: .8rem;
+    aspect-ratio: 1;
+    border-width: 2px;
+}
+
+ul li a.check-true::after{
+    content: "";
+    position: absolute;
+    border: solid #fff;
+    top: 16px;
+    left: 17px;
+    width: .5rem;
+    aspect-ratio: 1/2.5;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+
+ul li a.check-false::after{
+    content: "";
+    position: absolute;
+    border: solid #fff;
+    top: 23px;
+    left: 11px;
+    width: .8rem;
+    aspect-ratio: 1;
+    border-width: 2px;
 }

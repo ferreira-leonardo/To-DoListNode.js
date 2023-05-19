@@ -11,4 +11,6 @@ routes.post('/updatetask/:id', TaskController.updateTask)
 
 routes.get('/deleteonetask/:id',TaskController.deleteOneTask)
 
+routes.get('/check/:id',TaskController.taskCheck)
+
 module.exports = routes;
