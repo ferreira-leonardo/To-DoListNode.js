@@ -1,0 +1,8 @@
+<h1><%= titleForm %></h1>
+<form
+  action="/<%= action %>"
+  method="post"
+  enctype="application/x-www-form-urlencoded">
+  <input type="text" name="task" id="task" placeholder="Insira uma tarefa" value="<%= value %>" />
+  <button type="submit" id="<%= idBtn %>"><%= nameBtn %></button>
+</form>
