@@ -1,9 +1,13 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
+
+const USER = process.env.USER;
+const PASSWORD = process.env.PASSWORD;
 
 const conectToDB = () => {
   mongoose
     .connect(
-      "mongodb+srv://admin:17200118@databasecenter.r6l2xvh.mongodb.net/?retryWrites=true&w=majority",
+      `mongodb+srv://${USER}:${PASSWORD}@databasecenter.r6l2xvh.mongodb.net/?retryWrites=true&w=majority`,
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
