@@ -24,7 +24,7 @@ npm start
 ````
 
 ## 6. Access the deploy
-<a href='https://todolistnode-2ca9.onrender.com/'>🔗To-Do deploy</a>
+<a href='https://todolistnode-2ca9.onrender.com/' target="_blank">🔗To-Do deploy</a>
 
 ## 7. Media
 <img src="media/todo-img.png">
