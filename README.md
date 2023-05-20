@@ -1,6 +1,7 @@
 # To-DoListNode.js
 
 ## 0. Media
+<img src="./media/todo-img">
 
 ## 1. Command to clone the repository
 ````
