@@ -1,8 +1,5 @@
 # To-DoListNode.js
 
-## 0. Media
-<img src="./media/todo-img">
-
 ## 1. Command to clone the repository
 ````
 git clone https://github.com/ferreira-leonardo/To-DoListNode.js.git
@@ -28,3 +25,6 @@ npm start
 
 ## 6. Access the deploy
 <a href='https://todolistnode-2ca9.onrender.com/'>🔗To-Do deploy</a>
+
+## 7. Media
+<img src="media/todo-img.png">
